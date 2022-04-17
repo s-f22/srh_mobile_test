@@ -52,7 +52,7 @@ export default function Welcome() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'a1a1a1'
+    backgroundColor: 'white'
   },
   containerLogo: {
     flex: 2,
