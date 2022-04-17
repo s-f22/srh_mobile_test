@@ -6,7 +6,9 @@ import {
   View,
   StyleSheet,
   TextInput,
-  TouchableOpacity
+  TouchableOpacity,
+  KeyboardAvoidingView,
+  Image
 } from 'react-native';
 
 
@@ -14,7 +16,7 @@ import {
 export default function SignIn() {
 
   return (
-    <View style={styles.container}>
+    <KeyboardAvoidingView style={styles.container}>
       <Animatable.View animation="fadeInLeft" delay={500} style={styles.containerHeader}>
         <Text style={styles.message}>Bem-vindo(a)</Text>
       </Animatable.View>
@@ -22,7 +24,7 @@ export default function SignIn() {
       <Animatable.View animation="fadeInUp" style={styles.containerForm}>
         <Text style={styles.title}>CPF</Text>
         <TextInput
-          placeholder='Digite seu CPF'
+          placeholder='Digite somente os números'
           style={styles.input}
         />
         <Text style={styles.title}>Senha</Text>
@@ -31,20 +33,25 @@ export default function SignIn() {
           style={styles.input}
         />
         <TouchableOpacity style={styles.button}>
-          <Text style={styles.buttonText}>Acessar</Text>
+          <Text style={styles.buttonText}>Entrar</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.buttonRegister}>
-          <Text style={styles.registerText}>Não tem conta? Solicite o cadastro ao seu gerente.</Text>
+          <Text style={styles.registerText}>Ainda não tem conta? Solicite o cadastro ao seu gestor.</Text>
         </TouchableOpacity>
+        <Image
+          source={require("../../../assets/imgMobile/entrando.png")}
+          style={styles.imgEntrando}
+          resizeMode="contain"
+        />
       </Animatable.View>
-    </View>
+    </KeyboardAvoidingView>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'red'
+    backgroundColor: '#C20004'
   },
   containerHeader:{
     marginTop: '14%',
@@ -76,7 +83,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
   button: {
-    backgroundColor: 'red',
+    backgroundColor: '#C20004',
     width: '100%',
     borderRadius: 4,
     paddingVertical: 8,
@@ -95,5 +102,8 @@ const styles = StyleSheet.create({
   },
   registerText: {
     color: '#a1a1a1'
+  },
+  imgEntrando: {
+    width: '70%'
   }
 })

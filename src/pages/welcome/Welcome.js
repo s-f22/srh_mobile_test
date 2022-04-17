@@ -18,15 +18,23 @@ export default function Welcome() {
     <View style={styles.container}>
       <View style={styles.containerLogo}>
         <Animatable.Image
+          style={styles.tituLogo}
+          animation="fadeInDown"
+          source={require("../../../assets/imgMobile/logo_2S.png")}
+
+          resizeMode="contain"
+        />
+        <Animatable.Text animation="flipInY" style={styles.tituloRH}>nomePojeto || logo</Animatable.Text>
+        <Animatable.Image
           animation="flipInY"
-          source={require("../../../assets/imgWeb/logo.png")}
+          source={require("../../../assets/imgMobile/welcome.png")}
           style={{ width: '100%' }}
           resizeMode="contain"
         />
       </View>
 
       <Animatable.View delay={600} animation="fadeInUp" style={styles.containerForm}>
-        <Text style={styles.title}>Motivação e benefícios, tudo num só App!</Text>
+        <Text style={styles.title}>Acompanhe sua motivação e benefícios, tudo num só App!</Text>
         <Text style={styles.text}>Faça seu login para começar</Text>
         <TouchableOpacity
           style={styles.button}
@@ -44,31 +52,45 @@ export default function Welcome() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'white'
+    backgroundColor: 'a1a1a1'
   },
   containerLogo: {
     flex: 2,
     backgroundColor: 'white',
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+  },
+  tituLogo: {
+    width: '100%',
+    marginBottom: '25%'
+  },
+  tituloRH: {
+    fontSize: 35,
+    fontWeight: 'bold',
+    marginBottom: '3%',
+    color: '#C20004',
+    fontStyle:'italic',
+    fontFamily: 'MontSerrat'
   },
   containerForm: {
     flex: 1,
-    backgroundColor: 'red',
+    backgroundColor: '#C20004',
     borderTopLeftRadius: 25,
     borderTopRightRadius: 25,
     paddingStart: '5%',
-    paddingEnd: '5%',
+    paddingEnd: '5%'
   },
   title: {
     fontSize: 24,
     fontWeight: 'bold',
     marginTop: 28,
     marginBottom: 12,
-    color: 'white'
+    color: 'white',
+    alignSelf: 'center'
   },
   text: {
     color: 'white',
+    alignSelf: 'center'
   },
   button: {
     position: 'absolute',

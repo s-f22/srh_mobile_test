@@ -9,7 +9,7 @@ const Stack = createNativeStackNavigator();
 function App() {
   return (
     <NavigationContainer>
-      <StatusBar backgroundColor={'red'} barStyle="light-content" />
+      <StatusBar backgroundColor={'#C20004'} barStyle="light-content" />
       <Routes />
     </NavigationContainer>
   );
