@@ -20,7 +20,7 @@ export default function Welcome() {
         <Animatable.Image
           style={styles.tituLogo}
           animation="fadeInDown"
-          source={require("../../../assets/imgMobile/logo_2S.png")}
+          source={require("../../../assets/imgWeb/logo.png")}
 
           resizeMode="contain"
         />
@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
   },
   tituLogo: {
     width: '100%',
-    marginBottom: '25%'
+    marginBottom: '10%'
   },
   tituloRH: {
     fontSize: 35,
